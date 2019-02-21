@@ -3,13 +3,15 @@
 # def main():
 # hero_health = 10
 # hero_power = 5
-#     goblin_health = 6
-#     goblin_power = 2
+# goblin_health = 6
+# goblin_power = 2
+user_input = input("? ")
 
 class Character():
     def __init__(self, new_name):
         self.name = new_name
         pass
+# while Goblin.alive() and Hero.alive():
 
 class Hero(Character):
     def __init__(self, new_name, hero_health, hero_power):
@@ -18,10 +20,11 @@ class Hero(Character):
         self.health = hero_health
         self.power = hero_power
 
-    def attack(self):
-        return "Attack test"
-        # if input == 1:
-        #     goblin_health -= hero_power
+    def attack(self, goblin_health, hero_power):
+        if input == 1:
+            goblin_health -= hero_power
+        return "Hero has delt %d damage." % (goblin_health - hero_power)
+
 
 class Goblin(Character):
     def __init__(self, new_name, goblin_health, goblin_power):
@@ -29,10 +32,11 @@ class Goblin(Character):
         self.health = goblin_health
         self.power = goblin_power
 
-    def attack(self):
-        return "Attack test 2"
-
-    
+    def attack(self, hero_health, goblin_power):
+        hero_health -= goblin_power
+        return "Goblin has delt %d damage." % (hero_health - goblin_power)
+        
+        
 
 
 #     while goblin_health > 0 and hero_health > 0:
