@@ -17,13 +17,22 @@ class Hero(Character):
         self.name = new_name
         self.health = hero_health
         self.power = hero_power
-    
+
+    def attack(self):
+        return "Attack test"
+        # if input == 1:
+        #     goblin_health -= hero_power
 
 class Goblin(Character):
     def __init__(self, new_name, goblin_health, goblin_power):
         self.name = new_name
         self.health = goblin_health
         self.power = goblin_power
+
+    def attack(self):
+        return "Attack test 2"
+
+    
 
 
 #     while goblin_health > 0 and hero_health > 0:

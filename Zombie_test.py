@@ -4,6 +4,7 @@ from Zombie_Attack import Goblin
 
 
 
+
 test = Character("test")
 test_Hero = Hero("Hero", 10, 5)
 test_Goblin = Goblin("Goblin", 6, 2)
@@ -16,3 +17,5 @@ print(test_Goblin.name)
 print("The goblin has %d, health." % (test_Goblin.health))
 print("The goblin does %d damage, in attack." % (test_Goblin.power))
 
+print(test_Hero.attack())
+print(test_Goblin.attack())
