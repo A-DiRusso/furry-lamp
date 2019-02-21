@@ -21,9 +21,10 @@ class Hero(Character):
         self.power = hero_power
 
     def attack(self, goblin_health, hero_power):
-        if input == 1:
-            goblin_health -= hero_power
-        return "Hero has delt %d damage." % (goblin_health - hero_power)
+        if user_input == "1":
+            print("Goblin Health")
+        return goblin_health - hero_power
+        # return "Hero has delt %d damage. \nGoblin has %d health." % (hero_power, goblin_health - hero_power)
 
 
 class Goblin(Character):
@@ -33,8 +34,9 @@ class Goblin(Character):
         self.power = goblin_power
 
     def attack(self, hero_health, goblin_power):
-        hero_health -= goblin_power
-        return "Goblin has delt %d damage." % (hero_health - goblin_power)
+        print("Hero Health")
+        return hero_health - goblin_power
+        # return "Goblin has delt %d damage.\nThe hero has %d life." % (goblin_power, hero_health - goblin_power)
         
         
 
