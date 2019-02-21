@@ -1,17 +1,23 @@
 # my hand copied start to the RPG game.
 
 # def main():
-#     hero_health = 10
-#     hero_power = 5
+# hero_health = 10
+# hero_power = 5
 #     goblin_health = 6
 #     goblin_power = 2
 
 class Character():
     def __init__(self, new_name):
         self.name = new_name
+        pass
 
 class Hero(Character):
-    pass
+    def __init__(self, new_name, hero_health, hero_power):
+        # super() figure this shit out later??????
+        self.name = new_name
+        self.health = hero_health
+        self.power = hero_power
+    
 
 class Goblin(Character):
     pass
