@@ -20,7 +20,11 @@ class Hero(Character):
     
 
 class Goblin(Character):
-    pass
+    def __init__(self, new_name, goblin_health, goblin_power):
+        self.name = new_name
+        self.health = goblin_health
+        self.power = goblin_power
+
 
 #     while goblin_health > 0 and hero_health > 0:
 #         print("You have %d health and %d power." % (hero_health, hero_power))
